@@ -19,77 +19,142 @@
       width:100%;
       height:100%;
       overflow:hidden;
-      background:#000;
       font-family:Arial, Helvetica, sans-serif;
+      background:#000;
     }
 
+    body{
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* TOPO */
     .topo{
-      position:fixed;
-      top:0;
-      left:0;
       width:100%;
-      height:60px;
+      height:45px;
       background:#0f172a;
+      border-bottom:2px solid #16a34a;
       display:flex;
       align-items:center;
       justify-content:center;
-      z-index:9999;
-      border-bottom:2px solid #16a34a;
+      flex-shrink:0;
     }
 
     .topo h1{
       color:#fff;
-      font-size:22px;
+      font-size:17px;
       font-weight:700;
       letter-spacing:1px;
     }
 
-    iframe{
-      position:absolute;
-      top:60px;
-      left:0;
+    /* IFRAME */
+    .iframe-area{
+      flex:1;
       width:100%;
-      height:calc(100% - 60px);
-      border:none;
+      overflow:hidden;
+    }
 
-      /* Permissões */
-      allowfullscreen:true;
+    iframe{
+      width:100%;
+      height:100%;
+      border:none;
+      background:#fff;
+    }
+
+    /* RODAPÉ */
+    .rodape{
+      width:100%;
+      height:65px;
+      background:#0f172a;
+      border-top:2px solid #16a34a;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px;
+      flex-shrink:0;
+    }
+
+    .suporte-btn{
+      width:100%;
+      max-width:400px;
+      height:45px;
+      background:#16a34a;
+      color:#fff;
+      text-decoration:none;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-size:15px;
+      font-weight:700;
+      transition:0.2s;
+    }
+
+    .suporte-btn:hover{
+      transform:scale(1.02);
+      background:#15803d;
+    }
+
+    .whatsapp-icon{
+      width:22px;
+      height:22px;
+      fill:white;
     }
   </style>
 </head>
 <body>
 
+  <!-- TOPO -->
   <div class="topo">
     <h1>BANCA BRASILEIRA BR</h1>
   </div>
 
-  <iframe
-    src="https://app.bancabrasileira.com.br/pr/kNCaMqXJ"
-    allow="
-      clipboard-read;
-      clipboard-write;
-      autoplay;
-      fullscreen;
-      geolocation;
-      microphone;
-      camera;
-      payment;
-      usb;
-      web-share
-    "
-    sandbox="
-      allow-same-origin
-      allow-scripts
-      allow-forms
-      allow-popups
-      allow-modals
-      allow-downloads
-      allow-presentation
-      allow-top-navigation
-      allow-top-navigation-by-user-activation
-    "
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+  <!-- IFRAME -->
+  <div class="iframe-area">
+    <iframe
+      src="https://app.bancabrasileira.com.br/pr/kNCaMqXJ"
+      allow="
+        clipboard-read;
+        clipboard-write;
+        autoplay;
+        fullscreen;
+        geolocation;
+        microphone;
+        camera;
+        payment;
+        usb;
+        web-share
+      "
+      sandbox="
+        allow-same-origin
+        allow-scripts
+        allow-forms
+        allow-popups
+        allow-modals
+        allow-downloads
+        allow-presentation
+        allow-top-navigation
+        allow-top-navigation-by-user-activation
+      "
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="rodape">
+    <a
+      class="suporte-btn"
+      href="https://wa.me/558393389383?text=Preciso%20de%20ajudo%20na%20Banca%20Brasileira!"
+      target="_blank">
+
+      <svg class="whatsapp-icon" viewBox="0 0 32 32">
+        <path d="M16.002 3C8.821 3 3 8.821 3 16c0 2.54.735 5.013 2.124 7.14L3 29l5.995-2.073A12.94 12.94 0 0016.002 29C23.179 29 29 23.179 29 16S23.179 3 16.002 3zm0 23.667a10.6 10.6 0 01-5.405-1.49l-.386-.229-3.558 1.23 1.158-3.67-.251-.377A10.593 10.593 0 015.333 16c0-5.882 4.785-10.667 10.669-10.667 5.881 0 10.665 4.785 10.665 10.667 0 5.884-4.784 10.667-10.665 10.667zm5.853-7.98c-.32-.16-1.893-.934-2.186-1.04-.293-.107-.507-.16-.72.16-.213.32-.826 1.04-1.013 1.253-.187.213-.373.24-.693.08-.32-.16-1.35-.497-2.57-1.585-.95-.848-1.59-1.893-1.777-2.213-.187-.32-.02-.493.14-.653.145-.144.32-.373.48-.56.16-.187.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.72-1.733-.986-2.373-.26-.626-.523-.54-.72-.55l-.613-.01c-.213 0-.56.08-.853.4-.293.32-1.12 1.093-1.12 2.667 0 1.573 1.146 3.093 1.306 3.307.16.213 2.253 3.44 5.46 4.82.763.33 1.358.526 1.822.673.766.243 1.464.208 2.016.126.614-.091 1.893-.773 2.16-1.52.267-.746.267-1.386.187-1.52-.08-.133-.293-.213-.613-.373z"/>
+      </svg>
+
+      CHAMAR SUPORTE
+    </a>
+  </div>
 
 </body>
 </html>
